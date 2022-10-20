@@ -1,0 +1,49 @@
+<div class="image">
+    <img src="assets/yes-s.png" alt="">
+</div>
+<div class="container"> 
+    <div>
+
+        <form class="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <ng-template [ngIf]="message">
+                <p class="error">
+                    {{ message }}
+                </p>
+            </ng-template>
+            <div><h2>Sign Up</h2></div>
+            <div class="form-group">
+                <label for="first_name"></label>
+                <input type="text" class="form-control"  formControlName="first_name" placeholder="First name" id="first_name">
+            </div>
+
+            <div class="form-group">
+                <label for="last_name"></label>
+                <input type="text" class="form-control"  formControlName="last_name"  placeholder="Last name" id="last_name">
+            </div>
+
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" class="form-control"  formControlName="email" placeholder="Enter email address" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone"></label>
+                <input type="text" class="form-control"  formControlName="phone" placeholder="Enter phone number" id="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="password" id="password"></label>
+                <input type="password" class="form-control"  formControlName="password"  placeholder="Password" id="password">
+            </div>
+
+            <div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+            <div>
+                <h3>
+                    <a routerLink="/login">login</a>
+                </h3>
+            </div>
+        </form> 
+    </div>
+</div> 

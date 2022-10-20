@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="image">
+        <img src="assets/yes-s.png" alt="">
+    </div>
+    
+    <div>
+        <form class="form" [formGroup]="resetForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email"><h5>Email address</h5></label>
+                <input type="email" class="form-control"  formControlName="email" placeholder="Enter email address" id="email">
+            </div>
+
+            <div>
+                <button class="btn btn-primary" type="submit" >Reset Password</button>
+            </div>
+        </form> 
+    </div>   
+
+</div>
